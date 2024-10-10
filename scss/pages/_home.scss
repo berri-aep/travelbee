@@ -1,0 +1,344 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.homeBanner{
+    background-color: $clr--dark;
+    padding-top:5rem ;
+    position: relative;
+    &__wrapper{
+        background-image: url(../../IMG/aaec3d71-group-62.png);
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 10rem;
+
+        img{
+            position: absolute;
+            width: 15rem;
+            right: -2rem;
+            top: 15rem;
+        }
+        
+    }
+    &__title{
+        h1{
+            text-align: center;
+            font-family: $font--primary;
+            font-size: 5rem;
+            padding: 2rem 0;
+        }
+    }
+    &--details{
+        align-content: center;
+        p{
+            text-align: center;
+            width: 50rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+    img{
+            display: block;
+            padding-top: 5rem;
+        }
+
+        &__minicard{
+            background-color: #000000;
+            position: absolute;
+            top: 30rem;
+            rotate: 15deg;
+            left: 10rem;
+            img{
+                border: 10px solid #000000;
+                width: 15rem;
+                padding-top: 1rem;
+            }
+            h2{
+                font-size: 1.3rem;
+            }
+            p{
+                padding-bottom: 4rem;
+            }
+            &--2{
+            background-color: $clr--light;
+            position: absolute;
+            bottom: 53rem;
+            rotate: -15deg;
+            right: 10rem;
+            text-align: left;
+            img{
+                border: 10px solid $clr--light;
+                width: 15rem;
+                padding-top: 1rem;
+            }
+            h2{
+                color: $clr--dark;
+                font-size: 1.3rem;
+            }
+            p{
+                color: $clr--dark;
+                padding-bottom: 4rem;
+            }
+            }
+        }
+}
+
+.homePopular{
+    background-color: $clr--light;
+    padding: 5rem 0;
+    position: relative;
+    &__chevron{
+        text-align: center;
+        i{
+        position: absolute;
+        color: $clr--dark;
+        border: 10px solid $clr--light;
+        background-color: $clr--light;
+        border-radius: 50%;
+        top: -2rem;
+        font-size: 2rem;
+        }        
+    }
+
+    &__wrapper{
+        @include evenGrid (2,3rem);
+    }
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 5rem;
+        gap: 2rem;
+        h1{
+        font-family: $font--primary;
+        color: $clr--dark;
+        font-size: 3rem;
+        }
+        p{
+        color: $clr--dark;
+        width: 45rem;
+        }
+    }
+
+    &__card{
+        display: flex;
+        gap: 1rem;
+        padding-bottom: 2rem;
+        border
+        &--0{
+            width: 35rem;
+            
+        }
+        img{
+            width: 10rem;
+            height: 10rem;
+        }
+        &--title{
+            h3{
+                font-size: 1.5rem;
+                font-family: $font--primary;
+                color: $clr--dark;
+            }
+            h4{
+                font-size: 1rem;
+                color: $clr--primary;
+                letter-spacing: 2px;
+            }
+        }
+
+        &--date{
+            display: flex;
+            align-items: center;
+            padding-bottom: 1rem;
+            i{
+                font-size: 13px;
+            }
+            p{
+                color: $clr--dark;
+                font-size: 13px;
+            }
+        }
+
+        &--details{
+            p{
+                color: $clr--dark;
+                text-align: justify;
+                line-height: 2rem;
+            }
+             a{
+                color: $clr--dark;
+                font-weight: 700;
+             }
+        }
+    }
+}
+
+.homeAbout{
+    background-color: $clr--light;
+    &__wrapper{
+        @include evenGrid(2,3rem);
+    }
+    &__title{
+        padding: 5rem 0;
+        h1{
+            font-family: $font--primary;
+            font-size: 4rem;
+            color: $clr--dark;
+        }
+    }
+    &__img{
+         
+        .img1{
+           position: relative;
+            width: 25rem;
+            border-top-left-radius: 40rem;
+            border-top-right-radius: 40rem;
+        }
+        .img2{
+            position: absolute;
+            border-radius: 50%;
+            width: 20rem;
+            border: 15px solid $clr--light;
+            left: 29rem;
+            margin-top: 25rem;
+        }
+    }
+    &__details{
+        text-align: left;
+        
+        p{
+            color: $clr--dark;
+            font-size: 1.3rem;
+            text-align: justify;
+            line-height: 35px;
+        }
+        a{
+            display: flex;
+            width: 10rem;
+            margin-top: 2rem;
+        }
+    }
+}
+
+.homeDesti{
+    text-align: center;
+    padding: 10rem 0;
+    &__wrapper{
+        @include centerAll;
+        flex-direction: column;
+        a{
+            display: flex;
+            width: 10rem;
+            margin-top: 2rem;
+            
+        }
+    }
+    &__img{
+        @include evenGrid (4, 3rem);
+        padding-bottom: 2rem;
+    }
+
+    &__title{
+        padding: 5rem 0;
+        h1{
+            font-family: $font--primary;
+            font-size: 4rem;
+            color: $clr--dark;
+        }
+        P{
+            font-size: 1.5rem;
+            color: #646161;
+            padding: 2rem 0;
+        }
+    }
+}
+
+.homeBlog{
+    &__wrapper{
+        @include unevenGrid ( 50rem 35rem, 5rem);
+    }
+
+    .searchBar{
+        margin: 2rem 0rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        @include between;
+
+
+        input{
+            margin: 0rem 1rem;
+            font-size: 1.5rem;
+            
+            &:enabled{
+
+            }
+        }           
+
+        .fa-magnifying-glass{
+            
+            padding: 2rem;
+            background-color: $clr--dark;
+            color: $clr--light;
+            transition: 0.3s ease;
+            &:hover{
+                background-color: $clr--primary;
+                transition: 0.3s ease;
+            }
+        }
+    }
+
+    .small__card{
+        align-items: center;
+        img{
+            height: 12rem;
+            object-fit: cover;
+        }
+    }
+}
+
+.homeSlider{
+    position: relative;
+    &__title{
+        &--social{
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                font-size: 2.5rem;
+                color: $clr--primary;
+                padding: 1.5rem;
+            }
+            h4{
+                color: $clr--dark;
+                font-weight: 400;
+            }
+        }
+        h1{
+            text-align: center;
+            font-size: 4rem;
+            color: $clr--dark;
+            font-family: $font--primary;
+            padding-bottom: 5rem;
+        }
+    }
+    &__nav{
+        display: flex;
+        gap: 113rem;
+        margin-top: -10rem;
+        justify-content: center;
+        i{
+            font-size: 2.5rem;
+            position: absolute;
+        }
+    }
+    &__img{
+        
+        img{
+            width: 5rem;
+            height: 15rem;
+            object-fit: cover;
+        }
+    }
+}

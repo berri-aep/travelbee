@@ -1,0 +1,24 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.tns-outer{
+    
+    & > button{
+        display: none;
+    }
+}
+
+.prev{
+    color: $clr--light;
+    font-size: 2rem;
+    &:hover{
+        color: $clr--dark;
+    }
+}
+
+.next{
+    @extend .prev;
+    &:hover{
+        color: $clr--dark
+    }
+}

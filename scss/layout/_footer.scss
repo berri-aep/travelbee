@@ -1,0 +1,66 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.footer{
+    padding-top: 15rem;
+    padding-bottom: 3rem;
+    &__wrapper{
+        @include evenGrid(3, 2rem);
+        justify-items: center;
+        img{
+            width: 15rem;
+            align-content: center;
+        }
+    }
+    .nav{
+        display: flex;
+        gap: 2rem;
+        padding-bottom: 2rem;
+        li a{
+            color: $clr--dark;
+        }
+        .active{
+                color: $clr--primary;
+            }  
+        }
+    
+
+    &__nav{
+        &--left{
+        p{
+        color: $clr--dark;
+        }
+        a{
+        color: $clr--primary;
+         }
+        }
+        &--right{
+            .nav{
+                justify-content: right;
+                padding-bottom: 3rem;
+            }
+            
+            .active{
+                color: $clr--primary;
+            }
+        }
+
+        &--social{
+            display: flex;
+            gap: 2rem;
+            justify-content: right;
+            li a{
+                color: $clr--dark;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                padding: 1.5rem;
+                transition: 0.2s ease;
+                &:hover{
+                    color: $clr--light;
+                    background-color: $clr--primary;
+                    transition: 0.2s ease;
+                }
+            }
+        }
+
+    }
+}

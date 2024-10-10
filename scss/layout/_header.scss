@@ -1,0 +1,55 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.header{
+    padding: 2rem;
+    background-color: $clr--dark;
+    &__wrapper{
+        
+    }
+    &__nav{
+        display: flex;
+        @include evenGrid(3,5rem);
+        gap: 3rem;
+        align-items: center;
+        &--left{
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+
+            .active{
+                color: $clr--primary;
+            }
+        }
+        &--right{
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+            justify-content: flex-end;
+            .active{
+                color: $clr--primary;
+            }
+        }
+    li {
+           
+        a{
+            font-size: 1.2rem;
+            color: $clr--light;
+            transition: .3s ease;
+            &:hover{
+                color: $clr--primary;
+                transition: .3s ease;
+            }
+            
+        }
+    }
+    img{
+        width: 15rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    }
+
+    
+}

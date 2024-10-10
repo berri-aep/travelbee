@@ -1,0 +1,85 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.contact{
+    padding: 5rem 0;
+    &__wrapper{
+        @include unevenGrid (45rem 5rem, 0rem);
+        width: 50rem;
+        justify-content: center;
+    }
+
+    &__img{
+        img{
+            width: 50rem;
+            height: 40rem;
+            object-fit: cover;
+        }
+    }
+
+    &__form{
+        width: 75rem;
+        height: 45rem;
+        p{
+            font-size: 1.5rem;
+            color: #444343c5;
+            margin-left: 2rem;
+            width: 44rem;
+        }
+
+        h2{
+            font-size: 3rem;
+            color: $clr--dark;
+            font-family: $font--primary;
+            margin: 0rem 2rem;
+        }
+
+        form{
+            padding: 2rem;
+        }
+        input{
+            width: 60%;
+            margin: .5rem;
+            padding: 1rem;
+            background-color: transparent;
+            border: 1px solid #5552529a;
+            
+        }
+        textarea{
+            @extend input;
+            height: 10rem;
+            margin-bottom: 3rem;
+        }
+        input:focus, input:enabled{
+            color: $clr--dark;
+        }
+        label{
+        display: flex;
+        justify-content: start;
+        margin-left: 1rem;
+        }
+
+        &--button{
+            margin-left: 10px;
+        }
+
+    &--name{
+        display: flex;
+            gap: 1rem;
+            
+            input{
+                width: 20.3rem;
+            }  
+
+    }
+    }
+}
+
+.map{
+    padding: 5rem 0rem;
+    &__wrapper{
+        iframe{
+            width: 100%;
+        }
+    }
+}

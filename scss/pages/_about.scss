@@ -1,0 +1,76 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.About{
+    padding: 5rem 0;
+    .homeAbout__details{
+        h5{
+            color: $clr--dark;
+            font-size: 2rem;
+            padding-top: 1rem;
+        }
+    }
+}
+
+.aboutStories{
+ padding:10rem 0;
+ &__wrapper{
+    @include evenGrid (2, 3rem);
+ }
+ &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    h1{
+        font-size: 4rem;
+        color: $clr--dark;
+        font-family: $font--primary;
+    }
+    p{
+        font-size: 1.5rem;
+        color: $clr--dark;
+        width: 65rem;
+        padding: 3rem 0;
+    }
+ }
+}
+
+.aboutDesti{
+    text-align: center;
+    padding: 10rem 0;
+    &__wrapper{
+        @include centerAll;
+        flex-direction: column;
+        a{
+            display: flex;
+            width: 10rem;
+            margin-top: 2rem;
+            
+        }
+    }
+    &__img{
+        @include evenGrid (4, 3rem);
+    }
+
+    &__title{
+        padding: 5rem 0;
+        h1{
+            font-family: $font--primary;
+            font-size: 4rem;
+            color: $clr--dark;
+        }
+        P{
+            font-size: 1.5rem;
+            color: #646161;
+            padding: 2rem 0;
+        }
+    }
+}
+
+.aboutBlog{
+    &__wrapper{
+        @include evenGrid(2,3rem);
+    }
+}

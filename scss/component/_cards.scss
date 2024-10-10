@@ -1,0 +1,140 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+
+.large{
+    &__card{
+        padding-bottom: 4.7rem;
+        img{
+        position: relative;
+        object-fit: cover;
+        width: 56rem;
+        height: 37rem;
+        }
+        &--details{
+            h2{
+                font-family: $font--primary;
+                font-size: 2.5rem;
+                color: $clr--dark;
+            }
+            p{
+                font-size: 1.1rem;
+                font-weight: 100;
+                color: $clr--dark;
+                width: 50rem;
+                line-height: 2rem;
+
+                border-bottom: 1px solid #55535357;
+            }
+            h4{
+                color: $clr--dark;
+                padding: 0.5rem 0rem;
+            }
+        }
+        &--small{
+            position: absolute;
+            margin-top: -37rem;
+            left: 59rem;
+            text-align: center;
+            i{
+                padding: 1rem 1.5rem;
+                background-color: $clr--light;
+                border: 2px solid $clr--light;
+            }
+            p{
+                padding: .5rem;
+                background-color: $clr--primary;
+                border-radius: 3px solid $clr--primary;
+                border-radius: 3rem;
+            }
+        }
+    }
+}
+
+.medium{
+    &__card{
+        img{
+            position: relative;
+            height: 40rem;
+            object-fit: cover;
+        }
+        &--details{
+            h2{
+                font-family: $font--primary;
+                font-size: 2.5rem;
+                color: $clr--dark;
+            }
+            p{
+                font-size: 1.1rem;
+                font-weight: 100;
+                color: $clr--dark;
+                line-height: 2rem;
+            }
+        }
+        &--small{
+            position: absolute;
+            margin-top: -40rem;
+            right: 15rem;
+            p{
+               padding: .5rem;
+                background-color: $clr--primary;
+                border-radius: 3px solid $clr--primary;
+                border-radius: 3rem;
+            }
+        }
+    }
+}
+
+.small{
+    &__card{
+                display: flex;
+        gap: 1rem;
+        padding-bottom: 2rem;
+        border
+        &--0{
+            width: 35rem;
+            
+        }
+        img{
+            width: 10rem;
+            height: 10rem;
+        }
+        &--title{
+            h3{
+                font-size: 1.5rem;
+                font-family: $font--primary;
+                color: $clr--dark;
+            }
+            h4{
+                font-size: 1rem;
+                color: $clr--primary;
+                letter-spacing: 2px;
+            }
+        }
+
+        &--date{
+            display: flex;
+            align-items: center;
+            padding-bottom: 1rem;
+            i{
+                font-size: 13px;
+            }
+            p{
+                color: $clr--dark;
+                font-size: 13px;
+            }
+        }
+
+        &--details{
+            p{
+                color: $clr--dark;
+                text-align: justify;
+                line-height: 2rem;
+            }
+             a{
+                color: $clr--dark;
+                font-weight: 700;
+             }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.blog{ 
+    padding: 10rem 0;
+    &__wrapper{
+        @include evenGrid (2, 3rem);
+    }
+    
+
+}
